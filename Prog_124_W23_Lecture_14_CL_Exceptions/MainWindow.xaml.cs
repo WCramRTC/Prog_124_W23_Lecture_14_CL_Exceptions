@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLibraryExample;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions
         public MainWindow()
         {
             InitializeComponent();
+
+            new Notes.PlayerExample().Show();
         }
     }
 }
