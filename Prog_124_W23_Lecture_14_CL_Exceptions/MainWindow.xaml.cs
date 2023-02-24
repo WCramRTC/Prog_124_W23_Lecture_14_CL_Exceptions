@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyLibrary;
 
 namespace Prog_124_W23_Lecture_14_CL_Exceptions
 {
@@ -21,10 +22,35 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<int> numbers = new List<int> {1 ,34, 76,3,43 , 2,5,34,65456};
+
         public MainWindow()
         {
             InitializeComponent();
+            // Class Libraries
+            // Exceptions
+            // Deconstructors
 
+            Team seahawks = new Team("Seahawks");
+
+            seahawks = null;
+
+        }
+
+        public void Example()
+        {
+            try
+            {
+                "a".RollTheDie().ToString();
+            }
+            catch (DiceRollException dre)
+            {
+                MessageBox.Show(dre.Message, "What is this");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("This was a regular exception " + ex.StackTrace);
+            }
         }
     }
 }
