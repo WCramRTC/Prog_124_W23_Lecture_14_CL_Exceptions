@@ -25,6 +25,16 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions.Notes
         public PlayerExample()
         {
             InitializeComponent();
+
+
+            try
+            {
+                new Player("", "");
+            }
+            catch
+            {
+                MessageBox.Show("An Error Happened");
+            }
         }
 
         private void btnMakePlayer_Click(object sender, RoutedEventArgs e)
@@ -42,6 +52,8 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions.Notes
                 runDisplay.Text = pe.Message;
             }
 
+            DisplayPlayer(player);
+
         } // btnMakePlayer_Click
 
         private void btnDisposeOfPlayer_Click(object sender, RoutedEventArgs e)
@@ -55,5 +67,17 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions.Notes
                 MessageBox.Show("There is not player");
             }
         }
+
+        private void DisplayPlayer(Player player)
+        {
+            if(player == null)
+            {
+                runDisplay.Text = "Player is null";
+            }
+            else
+            {
+                runDisplay.Text = player.ToString();
+            }
+        } 
     }
 }

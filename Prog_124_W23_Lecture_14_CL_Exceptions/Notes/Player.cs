@@ -69,9 +69,9 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions.Notes
         }
 
         // Deconstructor
-        ~Player()
-        {
-            MessageBox.Show($"Object containing {ToString()} was just disposed of.");
-        }
+        //~Player()
+        //{
+        //    MessageBox.Show($"Object containing {ToString()} was just disposed of.");
+        //}
     }
 }

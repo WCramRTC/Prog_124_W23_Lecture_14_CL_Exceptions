@@ -25,7 +25,6 @@ namespace Prog_124_W23_Lecture_14_CL_Exceptions
         {
             InitializeComponent();
 
-            new Notes.PlayerExample().Show();
         }
     }
 }
